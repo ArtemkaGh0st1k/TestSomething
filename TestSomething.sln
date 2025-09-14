@@ -14,6 +14,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ASP.NET CORE", "ASP.NET COR
 		..\..\gitignore = ..\..\gitignore
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWebApp", "TestWebApp\TestWebApp.csproj", "{46BF82B8-73FE-462C-83CD-F3E7D493FC5E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,9 +34,16 @@ Global
 		{C08426B5-320E-402A-ADDA-B34ABCC140CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C08426B5-320E-402A-ADDA-B34ABCC140CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C08426B5-320E-402A-ADDA-B34ABCC140CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46BF82B8-73FE-462C-83CD-F3E7D493FC5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46BF82B8-73FE-462C-83CD-F3E7D493FC5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46BF82B8-73FE-462C-83CD-F3E7D493FC5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46BF82B8-73FE-462C-83CD-F3E7D493FC5E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{46BF82B8-73FE-462C-83CD-F3E7D493FC5E} = {6324ABAE-E0FC-4E4B-AA11-488A944F5A8A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {04E87521-F428-49EC-AA11-6247C6FE16F7}
