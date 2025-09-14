@@ -1,7 +1,8 @@
 ﻿using System.Windows;
 using GalaSoft.MvvmLight.Threading;
-using TestSomethingWPF.Services;
+using TestSomething.ToNIPI.Services;
 using TestSomethingWPF.ViewModels;
+using Unity;
 
 namespace TestSomethingWPF
 {
@@ -10,11 +11,12 @@ namespace TestSomethingWPF
     /// </summary>
     public partial class App : Application
     {
-        public IViewModelFactory _viewModelFactory { get; private set; }
+        public static UnityContainer Container { get; private set; }
+
         public App()
         {
-            _viewModelFactory = new ViewModelFactory();
             Startup += App_Startup;
+            SetupIoC();
         }
 
         private void App_Startup(object sender, StartupEventArgs e)
@@ -22,6 +24,16 @@ namespace TestSomethingWPF
             DispatcherHelper.Initialize();
             var exViewModel = new ExampleViewModel();
             
+        }
+
+        private static UnityContainer SetupIoC()
+        {
+            Container = new UnityContainer();
+
+            Container.RegisterType<IViewModelFactory, ViewModelFactory>();
+            Container.RegisterType<IViewService, ViewService>();
+
+            return Container;
         }
     }
 }

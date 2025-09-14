@@ -1,17 +1,7 @@
-﻿using System;
-
-namespace TestSomethingWPF.Services
+﻿namespace TestSomething.ToNIPI.Services
 {
     public interface IViewModelFactory
     {
-        T Create<T>();
-    }
-
-    public class ViewModelFactory : IViewModelFactory
-    {
-        public T Create<T>()
-        {  
-            return (T)Activator.CreateInstance(typeof(T));
-        }
+        T Creaate<T>();
     }
 }

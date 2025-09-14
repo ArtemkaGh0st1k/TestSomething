@@ -91,16 +91,26 @@
     </ApplicationDefinition>
     <Compile Include="Extensions\StringExtension.cs" />
     <Compile Include="Services\IViewModelFactory.cs" />
+    <Compile Include="Services\IViewService.cs" />
+    <Compile Include="Services\ViewModelFactory.cs" />
+    <Compile Include="Services\ViewService.cs" />
     <Compile Include="UIControls\SampleUserControl.xaml.cs">
       <DependentUpon>SampleUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\ExampleViewModel.cs" />
     <Compile Include="ViewModels\GalasoftTestClass.cs" />
+    <Compile Include="ViewModels\SystemAnalysis\SystemAnalysisViewModel.cs" />
     <Compile Include="Views\ExampleView.xaml.cs">
       <DependentUpon>ExampleView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ExampleViewModelBase.xaml.cs">
       <DependentUpon>ExampleViewModelBase.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SystemAnalysis\SystemAnalysisControl.xaml.cs">
+      <DependentUpon>SystemAnalysisControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SystemAnalysis\SystemAnalysisView.xaml.cs">
+      <DependentUpon>SystemAnalysisView.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -125,6 +135,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ExampleViewModelBase.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SystemAnalysis\SystemAnalysisControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SystemAnalysis\SystemAnalysisView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -156,6 +174,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\TestSomething\TestSomething.csproj">
+      <Project>{e615b66d-2c94-469d-bbdc-2b1a681d15d2}</Project>
+      <Name>TestSomething</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
