@@ -1,13 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.34114.132
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestSomething", "TestSomething\TestSomething.csproj", "{E615B66D-2C94-469D-BBDC-2B1A681D15D2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Event", "Event\Event.csproj", "{E41673BA-D436-411A-A482-DABF268DC351}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestSomethingWPF", "TestSomethingWPF\TestSomethingWPF.csproj", "{C08426B5-320E-402A-ADDA-B34ABCC140CB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ASP.NET CORE", "ASP.NET CORE", "{6324ABAE-E0FC-4E4B-AA11-488A944F5A8A}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\gitignore = ..\..\gitignore
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
