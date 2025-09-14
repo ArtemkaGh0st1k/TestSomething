@@ -90,6 +90,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Extensions\StringExtension.cs" />
+    <Compile Include="Mapping\AutoMapperBootstrapper.cs" />
+    <Compile Include="Mapping\IMapCreator.cs" />
+    <Compile Include="Mapping\MapCreator\ExampleMapCreator.cs" />
     <Compile Include="Services\IViewModelFactory.cs" />
     <Compile Include="Services\IViewService.cs" />
     <Compile Include="Services\ViewModelFactory.cs" />
@@ -180,5 +183,6 @@
       <Name>TestSomething</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

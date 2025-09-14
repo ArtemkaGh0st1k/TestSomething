@@ -1,7 +1,18 @@
+using AutoMapper;
+using BookStore.DataAccess;
+using BookStore.DataAccess.Mapping;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+//builder.Services.AddAutoMapper(cfg => cfg.AddProfile<>);
+
+builder.Services.AddDbContext<BookStoreDbContext>(options =>
+{
+    options.UseNpgsql(builder.Configuration.GetConnectionString(nameof(BookStoreDbContext)));
+});
 
 var app = builder.Build();
 
